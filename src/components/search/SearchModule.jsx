@@ -2,7 +2,7 @@ import SearchDropDown from './SearchDropDown';
 
 const SearchModule = () => {
   return (
-    <div className="static left-1/2 z-50 mx-auto mt-14 flex w-80 items-center justify-center sm:absolute sm:bottom-20 sm:mt-0 sm:w-115 sm:-translate-x-1/2 md:bottom-16 2xl:bottom-[8.438rem] xl:bottom-[7rem] 2xl:w-[34.6rem]">
+    <div className="static left-1/2 z-50 mx-auto mt-14 flex w-80 items-center justify-center sm:absolute sm:bottom-20 sm:mt-0 sm:w-115 sm:-translate-x-1/2 md:bottom-16 xl:bottom-[7rem] 2xl:bottom-[8.438rem] 2xl:w-[34.6rem]">
       <div className="flex h-12 w-full rounded-[4.5rem] bg-white sm:h-14">
         <form className="flex h-full w-full items-center px-1">
           <button className="border-primary-400 flex h-10 w-10 items-center justify-center rounded-full border-2 bg-neutral-900 sm:h-12 sm:w-12">

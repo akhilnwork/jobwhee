@@ -42,7 +42,7 @@ const HomeLeftSvg = () => {
           </svg>
         </div>
         <div className="relative z-30 flex h-full w-full items-center justify-center bg-cover">
-          <h2 className="xl:leading-[3.125rem] text-xl leading-relaxed font-extrabold text-white uppercase xl:text-3xl 2xl:text-4xl 2xl:leading-[3.813rem]">
+          <h2 className="text-xl leading-relaxed font-extrabold text-white uppercase xl:text-3xl xl:leading-[3.125rem] 2xl:text-4xl 2xl:leading-[3.813rem]">
             Find the <span className="text-primary-400">talent</span> sign up
             <br />& get The <span className="text-lime-300">job</span> done
           </h2>
@@ -52,21 +52,20 @@ const HomeLeftSvg = () => {
   );
 };
 
-<div className="w-96 h-32 origin-top-left rotate-180 bg-neutral-500/5 rounded-3xl backdrop-blur-[33.50px]" />
+<div className="h-32 w-96 origin-top-left rotate-180 rounded-3xl bg-neutral-500/5 backdrop-blur-[33.50px]" />;
 
 const HomeRightSvg = () => {
   return (
-    <div className="static mx-auto mt-3 h-20 w-full max-w-72 rounded-3xl sm:absolute sm:top-28 sm:right-6 sm:mt-0 sm:h-20 sm:w-72 sm:max-w-[100%] md:w-[18.125rem] lg:h-28 2xl:top-30 2xl:right-[3.5rem] 2xl:z-50 2xl:h-36 2xl:w-[31rem] xl:w-[25.75rem] xl:h-32">
+    <div className="static mx-auto mt-3 h-20 w-full max-w-72 rounded-3xl sm:absolute sm:top-28 sm:right-6 sm:mt-0 sm:h-20 sm:w-72 sm:max-w-[100%] md:w-[18.125rem] lg:h-28 xl:h-32 xl:w-[25.75rem] 2xl:top-30 2xl:right-[3.5rem] 2xl:z-50 2xl:h-36 2xl:w-[31rem]">
       <div className="relative h-full w-full">
-        <div className="clippedRighttDiv relative z-30 bg-neutral-500/5 w-full h-full">
+        <div className="clippedRighttDiv relative z-30 h-full w-full bg-neutral-500/5">
           <div className="flex h-full w-full items-center justify-center">
-            <h2 className="text-xl xl:text-3xl xl:leading-[3.125rem] leading-[3.813rem] font-extrabold text-white uppercase 2xl:text-4xl pb-3 sm:pt-0">
-              We &apos;ll <span className="text-primary-400">handle</span>
-              that
+            <h2 className="pb-3 text-xl leading-[3.813rem] font-extrabold text-white uppercase sm:pt-0 xl:text-3xl xl:leading-[3.125rem] 2xl:text-4xl">
+              We &apos;ll <span className="text-primary-400">handle</span> that
             </h2>
           </div>
         </div>
-        <div className="absolute right-4 bottom-[-1.375rem] z-30 flex gap-2.5 sm:right-[2.8rem] md:right-1 2xl:right-11 xl:right-4">
+        <div className="absolute right-4 bottom-[-1.375rem] z-30 flex gap-2.5 sm:right-[2.8rem] md:right-1 xl:right-4 2xl:right-11">
           <Button
             css="bg-primary-400  sm:min-w-44 w-44 h-10 text-xs xl:w-56 text-primary-900 lg:text-base"
             text="Sign Up for Contract"

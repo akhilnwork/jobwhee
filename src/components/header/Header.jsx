@@ -14,7 +14,7 @@ const Header = () => {
   return (
     <header className="pt-[1.563rem]">
       <div className="container mx-auto">
-        <div className="box-border flex h-11 rounded-full bg-black p-1.5 sm:h-14 sm:p-4 2xl:h-20 xl:h-16">
+        <div className="box-border flex h-11 rounded-full bg-black p-1.5 sm:h-14 sm:p-4 xl:h-16 2xl:h-20">
           <div className="flex flex-1/5 items-center pl-1.5 sm:pl-3 lg:flex-1/3">
             <Logo />
           </div>
@@ -26,7 +26,7 @@ const Header = () => {
                     <li key={id} className="flex">
                       <Link
                         href={link}
-                        className="menu-item hover:text-primary-400 text-xs font-semibold text-white 2xl:text-base xl:text-sm"
+                        className="menu-item hover:text-primary-400 text-xs font-semibold text-white xl:text-sm 2xl:text-base"
                       >
                         {name}
                       </Link>

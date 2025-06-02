@@ -21,7 +21,7 @@ const ContractsSingle = () => {
             </p>
           </div>
         </div>
-        <div className="mt-3 flex w-full gap-5">
+        <div className="mt-3 flex w-full gap-2 lg:gap-5">
           <ClientBlock type="Talent" />
           <ClientBlock type="Client" />
         </div>
@@ -73,7 +73,7 @@ const ContractsSingle = () => {
                 </span>
               </div>
               <div className="flex w-1/2 text-xs">
-                <span className="w-full pl-[2%] font-semibold">Status: </span>
+                <span className="w-full pl-[20%] font-semibold">Status: </span>
                 <span className="w-full text-right font-normal text-zinc-700">
                   Ongoing
                 </span>
@@ -89,7 +89,7 @@ const ContractsSingle = () => {
                 </span>
               </div>
               <div className="flex w-1/2 text-xs">
-                <span className="w-full pl-[2%] font-semibold">Budget: </span>
+                <span className="w-full pl-[20%] font-semibold">Budget: </span>
                 <span className="w-full text-right font-normal text-zinc-700">
                   $ 2000
                 </span>
@@ -121,10 +121,10 @@ export const ClientBlock = ({ type }) => {
           <Image src="/person-1.png" width={48} height={48} alt="Person" />
         </div>
 
-        <div className="ml-auto flex w-full flex-col justify-end items-end sm:ml-0">
+        <div className="ml-auto flex w-full flex-col items-end justify-end sm:ml-0">
           <div
             className={cn(
-              'flex h-6 w-20 items-center justify-center rounded-[3rem] text-center text-xs sm:w-full sm:text-sm max-w-24 lg:text-sm',
+              'flex h-6 max-w-24 min-w-20 items-center justify-center rounded-[3rem] text-center text-xs sm:w-full sm:text-sm lg:text-sm',
               css
             )}
           >
