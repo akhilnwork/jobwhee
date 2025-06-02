@@ -3,17 +3,17 @@ import Star from '../icons/Star';
 import { cn } from '@/utils/cn';
 const ContractsSingle = () => {
   return (
-    <div className="relative mt-8 min-h-40 w-full max-w-96 md:max-w-full mx-auto md:mx-0">
+    <div className="relative mx-auto mt-8 min-h-40 w-full max-w-96 md:mx-0 md:max-w-full">
       <ContractsBg />
       <div className="flex w-full flex-col bg-[length:100%_100%] p-3">
         <div className="flex h-full w-full">
           <div className="flex w-5/12 justify-center">
-            <h4 className="sm:text-lg text-sm leading-tight font-black text-black">
+            <h4 className="text-sm leading-tight font-black text-black sm:text-lg">
               CONTRACT
             </h4>
           </div>
           <div className="mr-2.5 flex w-7/12 flex-col items-end justify-end text-right">
-            <h6 className="text-xs md:text-sm font-semibold text-black">
+            <h6 className="text-xs font-semibold text-black md:text-sm">
               Looking for Math Teacher
             </h6>
             <p className="text-[0.625rem] font-semibold md:text-xs">
@@ -22,13 +22,11 @@ const ContractsSingle = () => {
           </div>
         </div>
         <div className="mt-3 flex w-full gap-5">
-
-          <ClientBlock type="Talent" /> 
-          <ClientBlock type="Client"/>
-          
+          <ClientBlock type="Talent" />
+          <ClientBlock type="Client" />
         </div>
 
-        <div className="mt-4 sm:mt-5 flex flex-col">
+        <div className="mt-4 flex flex-col sm:mt-5">
           <div className="flex items-center">
             <div className="relative mr-1.5 flex h-5 w-5 items-center justify-center rounded-full bg-black">
               <Image
@@ -39,17 +37,19 @@ const ContractsSingle = () => {
                 className="h-2.5 w-2.5"
               />
             </div>
-            <div className="text-sm sm:text-base font-semibold text-black">Description</div>
+            <div className="text-sm font-semibold text-black sm:text-base">
+              Description
+            </div>
           </div>
           <div className="mt-2.5 flex w-full">
-            <p className="text-xs sm:text-sm leading-tight font-normal text-zinc-700">
+            <p className="text-xs leading-tight font-normal text-zinc-700 sm:text-sm">
               We are looking for a teacher to provide one-on-one algebra and
               geometry tutoring, 60-minute sessions, twice weekly.
             </p>
           </div>
         </div>
 
-        <div className="mt-4 sm:mt-5 flex flex-col">
+        <div className="mt-4 flex flex-col sm:mt-5">
           <div className="flex items-center">
             <div className="relative mr-1.5 flex h-5 w-5 items-center justify-center rounded-full bg-black">
               <Image
@@ -60,7 +60,9 @@ const ContractsSingle = () => {
                 className="h-2.5 w-2.5"
               />
             </div>
-            <div className="text-sm  sm:text-base font-semibold text-black">Job Details</div>
+            <div className="text-sm font-semibold text-black sm:text-base">
+              Job Details
+            </div>
           </div>
           <div className="mt-2.5 flex w-full flex-col">
             <div className="flex w-full">
@@ -79,7 +81,9 @@ const ContractsSingle = () => {
             </div>
             <div className="mt-1 flex w-full">
               <div className="flex w-1/2 text-xs">
-                <span className="w-full font-semibold sm:text-sm">End Date: </span>
+                <span className="w-full font-semibold sm:text-sm">
+                  End Date:{' '}
+                </span>
                 <span className="w-full text-right font-normal text-zinc-700">
                   Not Estimated
                 </span>
@@ -95,9 +99,8 @@ const ContractsSingle = () => {
         </div>
         <div className="mt-5 flex">
           <div className="relative w-full rounded-[0.625rem] bg-black p-3">
-            <div className="w-full justify-start text-xs sm:text-sm leading-tight font-normal text-white">
-              Fixed-priced contract under the protection of 
-              payment system.
+            <div className="w-full justify-start text-xs leading-tight font-normal text-white sm:text-sm xl:text-center">
+              Fixed-priced contract under the protection of payment system.
             </div>
           </div>
         </div>
@@ -106,28 +109,40 @@ const ContractsSingle = () => {
   );
 };
 
-export const ClientBlock = ({type}) => {
-  const css = type == 'Client' ? 'bg-primary-400 text-primary-800' : 'bg-grayBg text-black';
+export const ClientBlock = ({ type }) => {
+  const css =
+    type == 'Client'
+      ? 'bg-primary-400 text-primary-800'
+      : 'bg-grayBg text-black';
   return (
-    <div className="flex w-full h-full flex-col rounded-[0.625rem] bg-[#F4F5F8] p-2.5">
+    <div className="flex h-full w-full flex-col rounded-[0.625rem] bg-[#F4F5F8] p-2.5">
       <div className="flex w-full">
-        <div className="flex h-12 w-12 overflow-hidden rounded-full border-stone-500 min-w-12 mr-1.5">
+        <div className="mr-1.5 flex h-12 w-12 min-w-12 overflow-hidden rounded-full border-stone-500">
           <Image src="/person-1.png" width={48} height={48} alt="Person" />
         </div>
 
-        <div className="ml-auto sm:ml-0 flex flex-col justify-end w-full">
-          <div className={cn("flex h-6 w-20 sm:w-full items-center justify-center rounded-[3rem] text-center sm:text-sm text-xs ", css)}>
+        <div className="ml-auto flex w-full flex-col justify-end items-end sm:ml-0">
+          <div
+            className={cn(
+              'flex h-6 w-20 items-center justify-center rounded-[3rem] text-center text-xs sm:w-full sm:text-sm max-w-24 lg:text-sm',
+              css
+            )}
+          >
             {type}
           </div>
           <div className="mt-2 flex w-full justify-end">
             <Star />
-            <span className="ml-1 text-xs sm:text-sm font-bold text-black">5.0</span>
+            <span className="ml-1 text-xs font-bold text-black sm:text-sm">
+              5.0
+            </span>
           </div>
         </div>
       </div>
       <div className="mt-4 flex w-full flex-col">
-        <h6 className="text-xs sm:text-base font-semibold">Edward Smith</h6>
-        <p className="text-xs sm:text-sm font-normal text-zinc-500">Founder of MathTech</p>
+        <h6 className="text-xs font-semibold sm:text-base">Edward Smith</h6>
+        <p className="text-xs font-normal text-zinc-500 sm:text-sm">
+          Founder of MathTech
+        </p>
       </div>
     </div>
   );

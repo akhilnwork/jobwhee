@@ -1,7 +1,7 @@
 import Link from 'next/link';
 const Logo = () => {
   return (
-    <Link href="/" className="logo h-4 w-28 2xl:h-7 2xl:w-44">
+    <Link href="/" className="logo h-4 w-28 2xl:h-7 2xl:w-44 xl:h-6 xl:w-36">
       <svg
         width="171"
         height="28"

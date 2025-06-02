@@ -14,19 +14,19 @@ const Header = () => {
   return (
     <header className="pt-[1.563rem]">
       <div className="container mx-auto">
-        <div className="box-border flex h-11 rounded-full bg-black p-1.5 sm:h-14 sm:p-4 2xl:h-20">
-          <div className="flex lg:flex-1/3 flex-1/5 items-center pl-1.5 sm:pl-3">
+        <div className="box-border flex h-11 rounded-full bg-black p-1.5 sm:h-14 sm:p-4 2xl:h-20 xl:h-16">
+          <div className="flex flex-1/5 items-center pl-1.5 sm:pl-3 lg:flex-1/3">
             <Logo />
           </div>
-          <div className="hidden lg:flex-2/3 flex-4/5 sm:flex">
+          <div className="hidden flex-4/5 sm:flex lg:flex-2/3">
             <div className="flex w-full items-center justify-center">
               <nav>
-                <ul className="menu flex lg:gap-9 sm:gap-4">
+                <ul className="menu flex sm:gap-4 lg:gap-9">
                   {menuItems.map(({ id, name, link }) => (
                     <li key={id} className="flex">
                       <Link
                         href={link}
-                        className="menu-item hover:text-primary-400 text-xs font-semibold text-white 2xl:text-base"
+                        className="menu-item hover:text-primary-400 text-xs font-semibold text-white 2xl:text-base xl:text-sm"
                       >
                         {name}
                       </Link>

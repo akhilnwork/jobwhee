@@ -1,10 +1,10 @@
 import Button from '../buttons/Button';
 
 import Arrow from '../icons/Arrow';
-
+<div className="h-40 w-[472.92px] rounded-3xl bg-neutral-500/5 backdrop-blur-[33.50px]" />;
 const HomeLeftSvg = () => {
   return (
-    <div className="overflow-hidden static z-50 mx-auto mt-9 flex h-28 w-full max-w-72 sm:absolute sm:top-7 sm:left-6 sm:mt-0 sm:w-[18.75rem] sm:max-w-[100%] xl:top-10 xl:left-10 2xl:h-48 2xl:w-[35.438rem]">
+    <div className="static z-50 mx-auto mt-9 flex h-28 w-full max-w-72 overflow-hidden sm:absolute sm:top-7 sm:left-6 sm:mt-0 sm:w-[18.75rem] sm:max-w-[100%] xl:top-8 xl:left-8 xl:h-40 xl:w-[30rem] 2xl:top-10 2xl:left-10 2xl:h-48 2xl:w-[35.438rem]">
       <div className="relative h-full w-full">
         <div className="blackdrop absolute h-full w-full">
           <svg
@@ -18,9 +18,7 @@ const HomeLeftSvg = () => {
           >
             <defs>
               <clipPath id="left-shape">
-                <path
-                  d="M0,28C0,12.5,12.5,0,28,0h511.5c15.5,0,28,12.5,28,28v58.8c0,5.7-1.7,11.2-4.9,15.9l-52.4,76.2 c-5.2,7.6-13.9,12.1-23.1,12.1H28c-15.5,0-28-12.5-28-28V28z"
-                />
+                <path d="M0,28C0,12.5,12.5,0,28,0h511.5c15.5,0,28,12.5,28,28v58.8c0,5.7-1.7,11.2-4.9,15.9l-52.4,76.2 c-5.2,7.6-13.9,12.1-23.1,12.1H28c-15.5,0-28-12.5-28-28V28z" />
               </clipPath>
             </defs>
             <foreignObject className="h-full w-full" x="0" y="0">
@@ -44,7 +42,7 @@ const HomeLeftSvg = () => {
           </svg>
         </div>
         <div className="relative z-30 flex h-full w-full items-center justify-center bg-cover">
-          <h2 className="text-xl leading-relaxed font-extrabold text-white uppercase 2xl:text-4xl 2xl:leading-[3.813rem]">
+          <h2 className="xl:leading-[3.125rem] text-xl leading-relaxed font-extrabold text-white uppercase xl:text-3xl 2xl:text-4xl 2xl:leading-[3.813rem]">
             Find the <span className="text-primary-400">talent</span> sign up
             <br />& get The <span className="text-lime-300">job</span> done
           </h2>
@@ -54,20 +52,23 @@ const HomeLeftSvg = () => {
   );
 };
 
+<div className="w-96 h-32 origin-top-left rotate-180 bg-neutral-500/5 rounded-3xl backdrop-blur-[33.50px]" />
+
 const HomeRightSvg = () => {
   return (
-    <div className="static mx-auto mt-3 sm:mt-0 sm:h-20 w-full max-w-72 rounded-3xl sm:absolute sm:top-28 sm:right-6 xl:h-28 sm:w-72 sm:max-w-[100%] md:w-[18.125rem] 2xl:top-30 2xl:right-[3.5rem] 2xl:z-50 2xl:h-36 2xl:w-[31rem]">
+    <div className="static mx-auto mt-3 h-20 w-full max-w-72 rounded-3xl sm:absolute sm:top-28 sm:right-6 sm:mt-0 sm:h-20 sm:w-72 sm:max-w-[100%] md:w-[18.125rem] lg:h-28 2xl:top-30 2xl:right-[3.5rem] 2xl:z-50 2xl:h-36 2xl:w-[31rem] xl:w-[25.75rem] xl:h-32">
       <div className="relative h-full w-full">
-        <div className="clippedRighttDiv relative z-30 bg-neutral-500/5">
+        <div className="clippedRighttDiv relative z-30 bg-neutral-500/5 w-full h-full">
           <div className="flex h-full w-full items-center justify-center">
-            <h2 className="text-xl leading-[3.813] font-extrabold text-white uppercase 2xl:text-4xl">
-              We &apos; pll <span className="text-primary-400">handle</span> that
+            <h2 className="text-xl xl:text-3xl xl:leading-[3.125rem] leading-[3.813rem] font-extrabold text-white uppercase 2xl:text-4xl pb-3 sm:pt-0">
+              We &apos;ll <span className="text-primary-400">handle</span>
+              that
             </h2>
           </div>
         </div>
-        <div className="absolute right-4 bottom-[-1.375rem] z-30 flex gap-2.5 sm:right-[2.8rem] md:right-1">
+        <div className="absolute right-4 bottom-[-1.375rem] z-30 flex gap-2.5 sm:right-[2.8rem] md:right-1 2xl:right-11 xl:right-4">
           <Button
-            css="bg-primary-400  sm:min-w-44 w-44 h-10 text-xs text-primary-900 lg:text-base"
+            css="bg-primary-400  sm:min-w-44 w-44 h-10 text-xs xl:w-56 text-primary-900 lg:text-base"
             text="Sign Up for Contract"
           />
           <div className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-4xl bg-white lg:h-[3.188rem] lg:w-[3.188rem]">

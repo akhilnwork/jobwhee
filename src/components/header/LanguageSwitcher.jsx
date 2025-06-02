@@ -27,11 +27,12 @@ const LanguageSwitcher = () => {
   const showDropdown = isOpen ? 'flex' : 'hidden';
   return (
     <div
-      className="relative flex xl:h-14 cursor-pointer items-center justify-center rounded-[10rem] border border-white bg-transparent pr-[0.938rem] pl-[0.563rem] text-sm font-medium text-white md:w-24  md:h-10"
+      className="relative flex cursor-pointer items-center justify-center rounded-[10rem] border border-white bg-transparent pr-[0.938rem] pl-[0.563rem] text-sm font-medium text-white md:h-10 md:w-24 xl:h-12"
       ref={dropdownRef}
       onClick={toggleDropdown}
     >
-      <Flag lang={'english'} /> <span className="pr-1.5 pl-2.5 uppercase">En</span>
+      <Flag lang={'english'} />{' '}
+      <span className="pr-1.5 pl-2.5 uppercase">En</span>
       <Arrow type="line" direction="down" css="fill-white" />
       <ul
         className={cn(

@@ -4,10 +4,10 @@
 @custom-variant dark (&:is(.dark *));
 
 .swiper-pagination {
-  @apply absolute right-0 bottom-[6.813rem] left-0 z-[500] flex w-full items-center justify-center gap-x-2;
+  @apply absolute right-0 2xl:bottom-[6.813rem] xl:bottom-[5.6rem] bottom-[2.3rem] sm:bottom-[3.2rem] left-0 z-[500] flex w-full items-center justify-center gap-x-2;
 
   .swiper-pagination-bullet {
-    @apply bg-primary-100 h-2.5 w-2.5 rounded-full opacity-50;
+    @apply bg-primary-100 lg:h-2.5 lg:w-2.5 rounded-full opacity-50 w-2 h-2;
 
     &.swiper-pagination-bullet-active {
       @apply bg-primary-400;
@@ -18,8 +18,11 @@
 .custom-shadow-box {
   box-shadow: 0px 4px 28.3px 0px #2b5bb540;
 }
-.contract-slider{
-  position: absolute;
+.contract-slider {
+  .swiper-button-prev,
+  .swiper-button-next {
+    @apply text-primary-900 absolute top-1/2 z-[500] flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white opacity-50 transition-opacity hover:opacity-100;
+  }
 }
 /* @media (prefers-color-scheme: dark) {
   :root {
