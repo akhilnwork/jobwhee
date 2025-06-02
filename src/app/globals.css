@@ -1,26 +1,377 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@custom-variant dark (&:is(.dark *));
+
+.swiper-pagination {
+  @apply absolute right-0 bottom-[6.813rem] left-0 z-[500] flex w-full items-center justify-center gap-x-2;
+
+  .swiper-pagination-bullet {
+    @apply bg-primary-100 h-2.5 w-2.5 rounded-full opacity-50;
+
+    &.swiper-pagination-bullet-active {
+      @apply bg-primary-400;
+    }
+  }
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.custom-shadow-box {
+  box-shadow: 0px 4px 28.3px 0px #2b5bb540;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+} */
+/* @media (min-width: 40rem) { */
+.clippedSlider {
+  clip-path: polygon(
+    3.47% 0.14%,
+    96.464% 0.14%,
+    96.464% 0.14%,
+    97.015% 0.229%,
+    97.538% 0.489%,
+    98.026% 0.904%,
+    98.472% 1.46%,
+    98.868% 2.144%,
+    99.208% 2.942%,
+    99.484% 3.838%,
+    99.691% 4.82%,
+    99.819% 5.873%,
+    99.864% 6.983%,
+    99.864% 92.972%,
+    99.864% 92.972%,
+    99.819% 94.082%,
+    99.691% 95.135%,
+    99.484% 96.117%,
+    99.208% 97.014%,
+    98.868% 97.811%,
+    98.472% 98.496%,
+    98.026% 99.052%,
+    97.538% 99.467%,
+    97.015% 99.726%,
+    96.464% 99.816%,
+    80.311% 99.816%,
+    80.311% 99.816%,
+    79.273% 99.794%,
+    78.237% 99.729%,
+    77.202% 99.621%,
+    76.168% 99.469%,
+    75.136% 99.274%,
+    74.106% 99.037%,
+    73.079% 98.756%,
+    72.055% 98.432%,
+    71.034% 98.065%,
+    70.017% 97.656%,
+    55.845% 91.642%,
+    55.845% 91.642%,
+    54.708% 91.209%,
+    53.566% 90.873%,
+    52.419% 90.632%,
+    51.269% 90.488%,
+    50.117% 90.44%,
+    48.966% 90.488%,
+    47.816% 90.632%,
+    46.669% 90.873%,
+    45.526% 91.209%,
+    44.39% 91.642%,
+    30.218% 97.656%,
+    30.218% 97.656%,
+    29.2% 98.065%,
+    28.179% 98.432%,
+    27.155% 98.756%,
+    26.128% 99.037%,
+    25.099% 99.274%,
+    24.067% 99.469%,
+    23.033% 99.621%,
+    21.998% 99.729%,
+    20.961% 99.794%,
+    19.924% 99.816%,
+    3.47% 99.816%,
+    3.47% 99.816%,
+    2.918% 99.726%,
+    2.395% 99.467%,
+    1.907% 99.052%,
+    1.462% 98.496%,
+    1.065% 97.811%,
+    0.725% 97.014%,
+    0.449% 96.117%,
+    0.243% 95.135%,
+    0.114% 94.082%,
+    0.069% 92.972%,
+    0.069% 6.983%,
+    0.07% 6.895%,
+    0.07% 6.895%,
+    0.12% 5.797%,
+    0.253% 4.756%,
+    0.462% 3.787%,
+    0.74% 2.902%,
+    1.08% 2.115%,
+    1.475% 1.441%,
+    1.918% 0.892%,
+    2.403% 0.483%,
+    2.922% 0.228%,
+    3.47% 0.14%
+  );
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.clippedLeftDiv {
+  clip-path: polygon(
+    0% 14.66%,
+    0% 14.66%,
+    0.064% 12.277%,
+    0.251% 10.019%,
+    0.549% 7.914%,
+    0.949% 5.994%,
+    1.441% 4.287%,
+    2.015% 2.823%,
+    2.661% 1.633%,
+    3.369% 0.746%,
+    4.128% 0.191%,
+    4.93% 0%,
+    94.982% 0%,
+    94.982% 0%,
+    95.784% 0.191%,
+    96.543% 0.746%,
+    97.251% 1.633%,
+    97.896% 2.823%,
+    98.471% 4.287%,
+    98.963% 5.994%,
+    99.363% 7.914%,
+    99.661% 10.019%,
+    99.848% 12.277%,
+    99.912% 14.66%,
+    99.912% 45.445%,
+    99.912% 45.445%,
+    99.903% 46.337%,
+    99.876% 47.221%,
+    99.832% 48.094%,
+    99.771% 48.956%,
+    99.692% 49.804%,
+    99.596% 50.636%,
+    99.484% 51.45%,
+    99.355% 52.245%,
+    99.21% 53.019%,
+    99.049% 53.77%,
+    89.824% 93.665%,
+    89.824% 93.665%,
+    89.531% 94.809%,
+    89.205% 95.852%,
+    88.848% 96.788%,
+    88.463% 97.614%,
+    88.055% 98.325%,
+    87.625% 98.916%,
+    87.177% 99.384%,
+    86.714% 99.723%,
+    86.24% 99.93%,
+    85.757% 100%,
+    4.93% 100%,
+    4.93% 100%,
+    4.128% 99.809%,
+    3.369% 99.254%,
+    2.661% 98.367%,
+    2.015% 97.177%,
+    1.441% 95.713%,
+    0.949% 94.006%,
+    0.549% 92.086%,
+    0.251% 89.981%,
+    0.064% 87.723%,
+    0% 85.34%,
+    0% 14.66%
+  );
+}
+.clippedRighttDiv {
+  clip-path: polygon(
+    100% 80.69%,
+    100% 80.69%,
+    99.926% 83.828%,
+    99.713% 86.803%,
+    99.373% 89.575%,
+    98.915% 92.105%,
+    98.353% 94.353%,
+    97.697% 96.281%,
+    96.958% 97.849%,
+    96.15% 99.018%,
+    95.282% 99.748%,
+    94.366% 100%,
+    5.734% 100%,
+    5.734% 100%,
+    4.819% 99.748%,
+    3.951% 99.018%,
+    3.142% 97.849%,
+    2.404% 96.281%,
+    1.748% 94.353%,
+    1.186% 92.105%,
+    0.728% 89.575%,
+    0.387% 86.803%,
+    0.174% 83.828%,
+    0.101% 80.69%,
+    0.101% 57.448%,
+    0.101% 57.448%,
+    0.116% 56.007%,
+    0.163% 54.584%,
+    0.239% 53.184%,
+    0.345% 51.812%,
+    0.48% 50.474%,
+    0.644% 49.176%,
+    0.835% 47.922%,
+    1.054% 46.718%,
+    1.298% 45.57%,
+    1.569% 44.483%,
+    11.65% 6.345%,
+    11.65% 6.345%,
+    11.983% 5.178%,
+    12.342% 4.122%,
+    12.724% 3.18%,
+    13.126% 2.354%,
+    13.546% 1.647%,
+    13.982% 1.062%,
+    14.432% 0.601%,
+    14.892% 0.269%,
+    15.36% 0.068%,
+    15.835% 0%,
+    94.366% 0%,
+    94.366% 0%,
+    95.282% 0.252%,
+    96.15% 0.982%,
+    96.958% 2.151%,
+    97.697% 3.719%,
+    98.353% 5.647%,
+    98.915% 7.895%,
+    99.373% 10.425%,
+    99.713% 13.197%,
+    99.926% 16.172%,
+    100% 19.31%,
+    100% 80.69%
+  );
+}
+
+@theme inline {
+  /* --breakpoint-*: initial;
+  --breakpoint-tablet: 48.75rem;
+  --breakpoint-laptop: 75rem;
+  --breakpoint-desktop: 90rem; */
+
+  --color-bodybackground: #f0f1f4;
+  --color-primary-100: #8e9a57;
+  --color-primary-400: #cbec5e;
+  --color-primary-900: #18470d;
+  --color-treritary: #546a85;
+  --color-grayBg: #dde3f3;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply text-foreground;
+  }
 }
